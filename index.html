@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- <link href="https://fonts.cdnfonts.com/css/simplifica" rel="stylesheet"> -->
+
+    <link rel="icon" type="image/" href="ico.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Arias Tower</title>
+</head>
+
+<body>
+    <div class="top">
+        <img src="logo.png" alt="" srcset="">
+    </div>
+    <div class="video-container">
+        <video controls>
+            <source src="p1.mp4" type="video/mp4">
+            Seu navegador não suporta vídeos HTML5.
+        </video>
+    </div>
+    <div class="c1">
+
+        <h1>
+            Empresas de tecnologia e do setor financeiro já estão entre os principais setores a ocupar os espaços de
+            escritórios boutique.
+            <br> <br>
+            Esses espaços, caracterizados por seu design sofisticado e localizações privilegiadas, oferecem uma gama de
+            serviços e comodidades, além de uma infraestrutura diferenciada.
+            <br> <br>
+            As áreas disponíveis costumam ser mais compactas, variando entre 350 m² e 800 m², o que favorece uma
+            ocupação altamente personalizada e exclusiva.
+        </h1>
+
+    </div>
+    <div class="parallax">
+        <div class="c2">
+
+            <h1>
+                O primeiro Boutique Office
+                de Santos.
+
+            </h1>
+        </div>
+    </div>
+    <div class="c3">
+
+        <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="true"
+            space-between="30" loop="true">
+            <swiper-slide><img src="./im1.png" alt=""></swiper-slide>
+            <swiper-slide><img src="./im2.png" alt=""></swiper-slide>
+            <swiper-slide><img src="./im3.png" alt=""></swiper-slide>
+            <swiper-slide><img src="./im4.png" alt=""></swiper-slide>
+            <swiper-slide><img src="./im5.png" alt=""></swiper-slide>
+        </swiper-container>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
+
+    </div>
+    <div class="c4">
+        <iframe class="map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4366.774144215209!2d-46.3167697037834!3d-23.975028906324788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce03d968068083%3A0x9e4da062e4a37665!2sARIAS%20TOWER!5e0!3m2!1spt-BR!2sbr!4v1692372613180!5m2!1spt-BR!2sbr"
+            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+
+
+        </iframe>
+    </div>
+<div class="c5">
+
+<img src="invespar.png" alt="">
+<h1>⬤ Rua Alexandre Herculano, 197 - 2103 - Gonzaga - Santos - SP - CEP 11050-031 - Vistamar Premium Offices +55 (13)  3222-2333</h1>
+</div>
+</div>
+
+
+    <div class="whatsapp-container">
+        <img src="https://static.whatsapp.net/rsrc.php/v3/yJ/r/Qhrnh5evyPV.png" alt="WhatsApp" id="zap">
+    </div>
+
+
+</body>
+
+</html>
+
+
+<style>
+    ::-webkit-scrollbar {
+        width: 13px;
+    }
+
+    ::-webkit-scrollbar-track-piece {
+        background-color: #474350;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #CBCBCB;
+        outline: 2px solid #FFF;
+        outline-offset: -2px;
+        border: .1px solid #B7B7B7;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #909090;
+    }
+
+
+
+    @font-face {
+        font-family: "alore";
+        src: url("/alore.otf")
+    }
+
+
+
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    .top {
+        width: 100vw;
+        height: 12vh;
+        background-color: black;
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+
+
+
+    }
+
+    .top>img {
+        filter: brightness(111);
+        height: 9vh;
+
+    }
+
+    .video-container {
+        width: 100vw;
+        height: 70vh;
+        overflow: hidden;
+        position: relative;
+        z-index: 4;
+        box-shadow: 1px 3vh 6vh 0px rgba(0, 0, 0, 0.521);
+      
+
+    }
+
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+    }
+
+    .c1 {
+
+        width: 100vw;
+        height: 70vh;
+        background-color: rgb(45, 45, 45);
+
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+
+    }
+
+
+
+
+
+
+    .c1>h1 {
+        margin: 0;
+        color: white;
+        font-family: 'alore', sans-serif;
+        font-size: 2rem;
+        letter-spacing: 3px;
+
+
+
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    @media (max-width: 800px) {
+        .c1>h1 {
+            margin: 0;
+            color: white;
+            font-family: 'alore', sans-serif;
+            font-size: 1rem;
+            /* Alterado para 1rem */
+            letter-spacing: 3px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    }
+
+
+
+
+
+
+
+
+    .c2 {
+        background-color: rgba(0, 0, 0, 0.512);
+        height: 70vh;
+        width: 100vw;
+
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        -webkit-backdrop-filter: blur(21px);
+        backdrop-filter: blur(12px);
+    }
+
+
+    .c2>h1 {
+        margin: 0;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 3rem;
+
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .parallax {
+        width: 100vw;
+        height: 70vh;
+        background-image: url('11.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+        position: relative;
+        z-index: 4;
+        /* box-shadow: 1px -3vh 6vh 0px rgba(0, 0, 0, 0.521); */
+
+    }
+
+    .c3 {
+        width: 100vw;
+        height: 70vh;
+        background-color: rgb(65, 65, 65);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .c4 {
+        width: 100vw;
+        height: 70vh;
+        background-color: rgb(65, 65, 65);
+      
+    }
+    .c5 {
+        width: 100vw;
+        height: 25vh;
+        background-color: rgb(0, 0, 0);
+        display: flex ;
+       
+        align-items: center;
+      
+    }
+    .c5> img {
+        filter: brightness(111);
+        height: 20vh;
+        width: auto;
+    
+    }
+    .c5>h1{
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 4vh;
+      
+    }
+    @media (max-width: 845px) {
+
+        .c5>h1{
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 4vh;
+        margin-top: 50vh;
+        margin-left: -34vh;
+      
+    }
+    
+    .c5 {
+        width: 100vw;
+        height: 70vh;
+        background-color: rgb(0, 0, 0);
+        display: flex ;
+       
+        align-items: center;
+      
+    }
+    }
+    .map {
+
+        height: 70vh;
+        width: 100vw;
+        filter: grayscale(69%) invert(92%) contrast(103%);
+    }
+
+
+
+
+
+    .whatsapp-container {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 999;
+        cursor: pointer;
+    }
+
+    .whatsapp-container>img {
+        height: 5vh;
+        width: auto;
+    }
+
+    .whatsapp-container>img:hover {
+        filter: brightness(1.5)
+    }
+</style>
+
+
+
+
+
+
+
+<style>
+    swiper-container {
+        width: 80vw;
+        height: 60vh;
+    }
+
+    swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #21212100;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    swiper-slide img {
+        display: block;
+        width: auto;
+        height: 80%;
+
+    }
+
+    @media (max-width: 670px) {
+        swiper-slide img {
+        display: block;
+        width: auto;
+        height: 50%;
+    }
+}
+    @media (max-width: 450px) {
+        swiper-slide img {
+        display: block;
+        width: auto;
+        height: 30%;
+    }
+    }
+
+
+
+
+    swiper-container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+
+
+
+
+
+
+
+
+
+<script>
+    let zap = document.querySelector("#zap")
+    zap.addEventListener("click", () => {
+        window.location.href = "https://wa.me/5513"
+    })
+</script>
