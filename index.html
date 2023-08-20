@@ -68,12 +68,13 @@
 
         </iframe>
     </div>
-<div class="c5">
+    <div class="c5">
 
-<img src="invespar.png" alt="">
-<h1>⬤ Rua Alexandre Herculano, 197 - 2103 - Gonzaga - Santos - SP - CEP 11050-031 - Vistamar Premium Offices +55 (13)  3222-2333</h1>
-</div>
-</div>
+        <img src="invespar.png" alt="">
+        <h1>⬤ Rua Alexandre Herculano, 197 - 2103 - Gonzaga - Santos - SP - CEP 11050-031 - Vistamar Premium Offices +55
+            (13) 3222-2333</h1>
+    </div>
+    </div>
 
 
     <div class="whatsapp-container">
@@ -119,6 +120,7 @@
         margin: 0;
         padding: 0;
         overflow-x: hidden;
+        background-color: black;
     }
 
     .top {
@@ -148,7 +150,7 @@
         position: relative;
         z-index: 4;
         box-shadow: 1px 3vh 6vh 0px rgba(0, 0, 0, 0.521);
-      
+
 
     }
 
@@ -257,60 +259,121 @@
         justify-content: center;
         align-items: center;
     }
+
     .c4 {
         width: 100vw;
         height: 70vh;
         background-color: rgb(65, 65, 65);
-      
+
     }
+
+
+
+
     .c5 {
         width: 100vw;
-        height: 25vh;
+        height: 27vh;
         background-color: rgb(0, 0, 0);
-        display: flex ;
-       
+        display: flex;
+
         align-items: center;
-      
+
     }
-    .c5> img {
+
+    .c5>img {
         filter: brightness(111);
         height: 20vh;
         width: auto;
-    
+
     }
-    .c5>h1{
+
+    .c5>h1 {
         color: white;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 4vh;
-      
+
     }
+
+
+
+
+
+
     @media (max-width: 845px) {
 
-        .c5>h1{
-        color: white;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 4vh;
-        margin-top: 50vh;
-        margin-left: -34vh;
-      
+
+
+        .c5 {
+            width: 100vw;
+            height: 35vh;
+            background-color: rgb(0, 0, 0);
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            /* Altera a direção para empilhar os elementos verticalmente */
+            /* justify-content: center; */
+            /* Centraliza verticalmente os elementos */
+        }
+
+        .c5>img {
+
+            filter: brightness(111);
+            height: 14vh;
+            width: auto;
+            margin-bottom: 10px;
+            /* Espaço entre a imagem e o texto */
+
+            /* margin-top: 2vh; */
+        }
+
+        .c5>h1 {
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2vh;
+            text-align: center;
+            /* Centraliza o texto horizontalmente */
+            margin-top: 0;
+            margin-left: 0;
+            margin-right: 0;
+            /* margin-bottom: 11vh; */
+            
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
-    
-    .c5 {
-        width: 100vw;
-        height: 70vh;
-        background-color: rgb(0, 0, 0);
-        display: flex ;
-       
-        align-items: center;
-      
-    }
-    }
+
+
+
+
+
+
+
+
+
+
     .map {
 
         height: 70vh;
         width: 100vw;
         filter: grayscale(69%) invert(92%) contrast(103%);
     }
+
+
+
 
 
 
@@ -364,17 +427,18 @@
 
     @media (max-width: 670px) {
         swiper-slide img {
-        display: block;
-        width: auto;
-        height: 50%;
+            display: block;
+            width: auto;
+            height: 50%;
+        }
     }
-}
+
     @media (max-width: 450px) {
         swiper-slide img {
-        display: block;
-        width: auto;
-        height: 30%;
-    }
+            display: block;
+            width: auto;
+            height: 30%;
+        }
     }
 
 
