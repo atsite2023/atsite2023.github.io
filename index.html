@@ -73,12 +73,22 @@
         <img src="invespar.png" alt="">
         <h1>⬤ Rua Alexandre Herculano, 197 - 2103 - Gonzaga - Santos - SP - CEP 11050-031 - Vistamar Premium Offices +55
             (13) 3222-2333</h1>
+
+
     </div>
+
+
+    <div class="c6">
+        <img src="./fbICON.png" alt="" class="icon" id="fb">
+
+        <img src="./IGICON.png" alt="" class="icon" id="ig">
     </div>
+
+    
 
 
     <div class="whatsapp-container">
-        <img src="https://static.whatsapp.net/rsrc.php/v3/yJ/r/Qhrnh5evyPV.png" alt="WhatsApp" id="zap">
+        <img src="./zap.png" alt="WhatsApp" id="zap">
     </div>
 
 
@@ -272,7 +282,7 @@
 
     .c5 {
         width: 100vw;
-        height: 27vh;
+        height: 30vh;
         background-color: rgb(0, 0, 0);
         display: flex;
 
@@ -294,6 +304,16 @@
 
     }
 
+    .c6{
+        display: flex;
+        justify-content: center;
+    }
+    .c6>img{
+        height: 7vh;
+        margin-left: 2vh;
+        margin-right: 2vh;
+        margin-bottom: 7vh;
+    }
 
 
 
@@ -305,7 +325,7 @@
 
         .c5 {
             width: 100vw;
-            height: 35vh;
+            height: 23vh;
             background-color: rgb(0, 0, 0);
             display: flex;
             align-items: center;
@@ -336,11 +356,17 @@
             margin-left: 0;
             margin-right: 0;
             /* margin-bottom: 11vh; */
-            
+
         }
 
 
-
+        .c6>img{
+        height: 4vh;
+        margin-left: 1vh;
+        margin-right: 1vh;
+        margin-top: 2vh;
+        margin-bottom: 10vh;
+    }
 
 
 
@@ -459,8 +485,22 @@
 
 
 <script>
-    let zap = document.querySelector("#zap")
+
+    let zap = document.querySelector("#zap");
     zap.addEventListener("click", () => {
         window.location.href = "https://wa.me/5513"
     })
+
+    let ig = document.querySelector("#ig")
+
+    ig.addEventListener("click",()=>{
+        window.location.href="https://www.instagram.com/arias.tower/"
+    })
+
+    let fb = document.querySelector("#fb");
+
+    fb.addEventListener("click",()=>{
+        window.location.href="https://www.facebook.com/profile.php?id=61550657066593&mibextid=2JQ9oc"
+    })
+
 </script>
