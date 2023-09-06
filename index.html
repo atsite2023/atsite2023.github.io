@@ -220,7 +220,7 @@
             <swiper-slide><img src="./im2.png" alt=""></swiper-slide>
             <swiper-slide><img src="./im4.png" alt=""></swiper-slide>
             <swiper-slide><img src="./im3.png" alt=""></swiper-slide>
-            
+
             <swiper-slide><img src="./im5.png" alt=""></swiper-slide>
         </swiper-container>
 
@@ -238,8 +238,9 @@
     <div class="c5">
 
 
-        <h1>⬤  Av. Almirante Cochrane, 47 - Embaré - Santos - SP - CEP 11040-001 - Arias Tower Boutique Offices +55 (13) 99797-0779</h1>
-            
+        <h1>⬤ Av. Almirante Cochrane, 47 - Embaré - Santos - SP - CEP 11040-001 - Arias Tower Boutique Offices +55 (13)
+            99797-0779</h1>
+
 
     </div>
 
@@ -247,11 +248,11 @@
     <div class="c6">
         <img src="./fbICON.png" alt="" class="icon" id="fb">
 
-        <img src="./IGICON.png" alt="" class="icon" id="ig"> 
-        
-        <img src="pdf.png"> 
+        <img src="./IGICON.png" alt="" class="icon" id="ig">
+
+        <img src="pdf.png">
     </div>
-   
+
 
 
 
@@ -775,25 +776,15 @@
 
 
 
-    function checkResolution() {
-            var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-            var screenHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+    if (window.innerWidth < 945) {
+        console.log("mb")
+        document.getElementById('videoPlayer').src = "p1mob.mp4"
 
-            return screenWidth <= 768 && screenHeight <= 1024; // Defina as dimensões de resolução desejadas
-        }
+    } else {
+        console.log("pc")
 
-        // Se a resolução for atendida, alterne para o vídeo de resolução mais baixa
-        if (checkResolution()) {
-            var videoPlayer = document.getElementById('videoPlayer');
-            videoPlayer.innerHTML = ''; // Remove a fonte do vídeo desktop
-
-            var source = document.createElement('source');
-            source.src = 'p1mob.mp4';
-            source.type = 'video/mp4';
-
-            videoPlayer.appendChild(source);
-            videoPlayer.load();
-        }
+        document.getElementById('videoPlayer').src = "p1.mp4"
+    }
 
 
 
