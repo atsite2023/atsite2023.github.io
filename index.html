@@ -2,8 +2,16 @@
 <html lang="en">
 
 <head>
-
-    <!-- <link href="https://fonts.cdnfonts.com/css/simplifica" rel="stylesheet"> -->
+<style>
+    /*   css "critico"   */
+     body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        background-color: black;
+    }
+</style>
+    
 
     <link rel="icon" type="image/" href="ico.ico">
     <meta charset="UTF-8">
@@ -18,7 +26,7 @@
     </div>
     <div class="video-container">
         <video id="videoPlayer" controls>
-            <source src="" type="video/mp4">
+            <source src="p1.mov" type="video/mp4">
             Seu navegador não suporta vídeos HTML5.
         </video>
     </div>
@@ -148,7 +156,7 @@
             </div>
             <div class="elevadores">
                 <div class="im">
-                    <img src="elevadoricon.png" alt="" srcset="">
+                    <img src="elevadoricon.png" alt="" srcset=""  loading="lazy">
                 </div>
                 <p>
 
@@ -166,7 +174,7 @@
                 </p>
             </div>
             <div class="eletrica">
-                <div class="im"><img src="eltricon.webp" alt=""></div>
+                <div class="im"><img src="eltricon.webp" alt="" loading="lazy"></div>
                 <p>
                     <STrong>ELÉTRICA E ILUMINAÇÃO</STrong>
                     <br>
@@ -181,9 +189,9 @@
 
             </div>
 
-            <div class="outros">
+            <div class="outros" >
                 <div class="im">
-                    <img src="outrosicon.png" alt="">
+                    <img src="outrosicon.png" alt=""  loading="lazy">
                 </div>
                 <p>
 
@@ -246,11 +254,11 @@
 
 
     <div class="c6">
-        <img src="./fbICON.png" alt="" class="icon" id="fb">
+        <img src="./fbICON.png" alt="" class="icon" id="fb"  loading="lazy">
 
-        <img src="./IGICON.png" alt="" class="icon" id="ig">
+        <img src="./IGICON.png" alt="" class="icon" id="ig"  loading="lazy">
 
-        <img src="pdf.png">
+        <img src="pdf.png"  loading="lazy">
     </div>
 
 
@@ -295,12 +303,7 @@
     }
 
 
-    body {
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
-        background-color: black;
-    }
+   
 
     .top {
         width: 100vw;
@@ -542,7 +545,16 @@
         }
 
 
+        .video-container {
+        width: 100vw;
+        height: 30vh;
+        overflow: hidden;
+        position: relative;
+        z-index: 4;
+        box-shadow: 1px 3vh 6vh 0px rgba(0, 0, 0, 0.521);
 
+
+    }
 
 
 
@@ -776,15 +788,15 @@
 
 
 
-    if (window.innerWidth < window.innerHeight ) {
-        console.log("mb")
-        document.getElementById('videoPlayer').src = "p1mob.mp4"
+    // if (window.innerWidth < window.innerHeight ) {
+    //     console.log("mb")
+    //     document.getElementById('videoPlayer').src = "p1mob.mp4"
 
-    } else {
-        console.log("pc")
+    // } else {
+    //     console.log("pc")
 
-        document.getElementById('videoPlayer').src = "p1.mp4"
-    }
+    //     document.getElementById('videoPlayer').src = "p1.mp4"
+    // }
 
 
 
