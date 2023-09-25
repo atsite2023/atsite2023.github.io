@@ -235,6 +235,60 @@
         <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
 
     </div>
+    <body>
+        <div class="fm">
+            <div class="formulario">
+    
+                <h1 class="titulo">Ficou interessado?</h1>
+                <div>
+                    <label>Nome</label>
+                    <br>
+                    <input type="text" id="nome" placeholder="nome">
+                </div>
+                <div>
+                    <label>Nascimento</label>
+                    <br>
+                    <input type="date" id="data" placeholder="nome">
+                </div>
+    
+    
+                <div>
+                    <label>Email</label>
+                    <br>
+                    <input type="email" id="email" placeholder="email">
+                </div>
+    
+                <div>
+                    <label>Telefone</label>
+                    <br>
+                    <input type="tel" id="telefone" placeholder="tel">
+                </div>
+    
+    
+                <div>
+                    <label>Empresa</label>
+                    <br>
+                    <input id="empresa" placeholder="(opcional)">
+                </div>
+                <div>
+                    <label>Mensagem</label>
+                    <br>
+                    <textarea name="msg" id="mensagem" cols="30" rows="10" placeholder="mensagem"></textarea>
+    
+                </div>
+    
+    
+    
+    
+                <div>
+                    <button onclick="envia()">enviar</button>
+                </div>
+                <br>
+                <div class="mensagem-status" id="status"></div>
+                <br>
+            </div>
+    
+        </div>
     <div class="c4">
         <iframe class="map"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4366.774144215209!2d-46.3167697037834!3d-23.975028906324788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce03d968068083%3A0x9e4da062e4a37665!2sARIAS%20TOWER!5e0!3m2!1spt-BR!2sbr!4v1692372613180!5m2!1spt-BR!2sbr"
@@ -692,8 +746,8 @@
     .esquerda,
     .direita {
         background-color: rgb(65, 65, 65);
-        width: 100%;
-       /* padding: 2%;*/
+        width: 100vw;
+        /* padding: 2%; */
     }
 
     .esquerda>div,
@@ -787,8 +841,224 @@
     })
 
 
+</script>
 
 
+<style>
+    .fm {
+        width: 100vw;
+
+        height: 90vh;
+
+        background-color: aquamarine;
+
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(75, 74, 74);
+        ;
+    }
+
+    .formulario {
+        background-color: #333;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        width: 30vw;
+    }
+
+    .formulario>div {
+        width: 90%;
+        margin: 0;
+    }
+
+    .formulario>div>label {
+        margin-top: 2%;
+    }
+
+    .formulario>div>input {
+        border-radius: 5px;
+        width: 100%;
+        height: 4vh;
+
+        margin-bottom: 1.8%;
+        /* margin-top: 0.5%;     */
+
+        font-size: 2vh;
+
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .formulario>div>textarea {
+        border-radius: 5px;
+        width: 100%;
+        height: 10vh;
+
+        margin-bottom: 1.8%;
+        font-size: 2vh;
+    }
+
+    .formulario>div>button {
+        border-radius: 5px;
+        width: 100%;
+        height: 4vh;
+
+
+        background-color: #007bff;
+
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+
+
+        border: none;
+
+        cursor: pointer;
+
+        margin-top: 3%;
+    }
+
+    .formulario>div>button:hover {
+        background-color: #0151a6;
+
+    }
+
+
+
+    .erro-status {
+        text-align: center;
+        color: #ff0000;
+        margin-top: 10px;
+    }
+
+    .mensagem-status {
+        text-align: center;
+        color: #00cc00;
+        margin-top: 10px;
+    }
+
+
+    @media (max-width:1130px ) {
+        .formulario {
+            width: 90%;
+            /* Altere a largura para 90% em telas menores */
+        }
+
+        .formulario>div>input,
+        .formulario>div>textarea {
+            width: 100%;
+            /* Largura total para campos de entrada em telas menores */
+        }
+    }
+</style>
+
+
+
+
+<script>
+    function enviaAJAX() {
+
+        let nm = document.getElementById("nome").value
+        let mail = document.getElementById("email").value
+        let tel = document.getElementById("telefone").value
+        let emp = document.getElementById("empresa").value
+        let msg = document.getElementById("mensagem").value
+        let dat = document.getElementById("data").value
+
+
+        let postData = {
+            nome: nm,
+            nascimento: dat,
+            email: mail,
+            telefone: tel,
+            empresa: emp,
+            mensagem: msg
+
+        }
+        const xhr = new XMLHttpRequest();
+
+
+
+
+
+
+        xhr.open("post", "/form", true);
+
+        xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+        xhr.send(JSON.stringify(postData));
+
+
+        xhr.onreadystatechange = () => {
+
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+
+
+
+                    console.log('Post enviado com sucesso!');
+
+
+                    document.getElementById("status").className = "mensagem-status";
+                    document.getElementById("status").textContent = "Enviado com sucessso!"
+
+
+                    document.getElementById("nome").value = ''
+                    document.getElementById("email").value = ''
+                    document.getElementById("telefone").value = ''
+                    document.getElementById("empresa").value = ''
+                    document.getElementById("mensagem").value = ''
+                    document.getElementById("data").value = ''
+
+                    setTimeout(() => {
+                        document.getElementById("stat").innerHTML = ""
+                    }, 5 * 1000);
+
+
+                } else {
+                    document.getElementById("status").className = "erro-status";
+                    document.getElementById("status").textContent = "Ocorreu algum erro no envio"
+
+
+                    setTimeout(() => {
+                        document.getElementById("status").innerHTML = ""
+                    }, 5 * 1000);
+
+                }
+            }
+
+
+        }
+
+
+
+    }
+
+
+
+    function envia() {
+
+        if (
+            document.getElementById("nome").value === ''
+            || document.getElementById("email").value === ''
+            || document.getElementById("telefone").value === ''
+            || document.getElementById("mensagem").value === ''
+            || document.getElementById("data").value === ''
+        ) {
+
+            document.getElementById("status").className = "erro-status";
+            document.getElementById("status").textContent = "Preencha todos os campos obrigatórios.";
+            setTimeout(() => {
+                document.getElementById("status").innerHTML = ""
+            }, 8 * 1000);
+        } else {
+            enviaAJAX()
+        }
+    }
 
 </script>
+
 
